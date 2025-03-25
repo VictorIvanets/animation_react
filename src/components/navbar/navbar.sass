@@ -1,0 +1,61 @@
+@use '../../sass/_variables' as *
+
+.navbar
+    width: 20rem
+    padding: 0.5rem 1rem
+    border-radius: 0.7rem
+    overflow: hidden
+    transition: all 0.2s 
+    
+    @media (max-width: 900px)
+        width: 17rem
+        position: absolute
+        z-index: 5
+        
+    &__linkblock
+        @include flex-row-sp-between
+        align-self: flex-end
+        margin: 2rem 0rem
+    &__hidebtnbox
+        display: flex
+        width: 20rem
+        align-items: center
+
+.minnavbar
+    width: 6rem   
+    transition: all 0.2s  
+    &-btn
+        width: 8rem
+        height: 4rem
+        transform: translateX(-27%)
+        h3
+            margin: 0
+            padding: 0
+            color: white
+            font-size: 3rem
+
+    @media (max-width: 900px)
+        height: 5.2rem
+
+.navbarlight
+    border: 1px solid $GRAY
+    box-shadow: 3px 3px 5px $GRAY
+.navbardark
+    border: 1px solid $DARK_SECOND_COLOR
+    box-shadow: 3px 3px 5px $DARK_SECOND_COLOR
+
+.linkitem
+    @include flex-row-sp-between
+    gap: 5px
+    width: 15rem
+    padding-right: 5px
+    padding-left: 5px
+    border-radius: 3px
+    overflow: hidden
+    h4
+        font-size: 30px
+    p
+        transition: all 0.2s
+        &:hover  
+            transition: all 0.2s
+            font-weight: 600

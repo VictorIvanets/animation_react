@@ -1,0 +1,116 @@
+@use './sass/_variables' as *
+@use './components/animation/_animation' as *
+
+:root
+    --index: calc( 1vw + 1vh )
+
+html
+    font-size: 62.5%
+    font-family: "Raleway", sans-serif
+    font-weight: 100
+    font-style: normal
+
+
+
+
+
+// @include animation-packege('animatable')
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
+h1
+    font-size: clamp(2rem, 4.5vw, 4rem)
+    font-weight: 800
+h2
+    font-size: clamp(2rem, 4.5vw, 4rem)
+    font-weight: 400
+h3
+    font-size: clamp(1.5rem, 4vw, 3rem)
+h4
+    font-size: clamp(1rem, 4vw, 1.5rem) 
+h5
+    font-size: clamp(1rem, 4vw, 1.5rem) 
+p, a
+    font-size: clamp(1rem, 4vw, 1.5rem) 
+    letter-spacing: 0.1rem
+    font-optical-sizing: auto
+    font-weight: 400
+    text-decoration: none
+    cursor: pointer
+
+button
+    border: none
+    outline: none
+    border-radius: .7rem
+    padding: 0.5rem
+    cursor: pointer
+    font-size: 1.5rem
+
+  
+.dark
+    background: $DARK_MAIN_COLOR
+    h1, h2
+        color: $DARK_THIRD_COLOR
+    h3, h4, p
+        color: $DARK_SECOND_COLOR
+    a, h5
+        color: $DARK_THIRD_COLOR
+    button
+        color: $DARK_FIRST_COLOR
+        background: $DARK_SECOND_COLOR
+        transition: all 0.2s
+        &:hover
+            background: $DARK_FIRST_COLOR
+            color: $DARK_SECOND_COLOR
+            transition: all 0.2s
+
+    .active
+        color: $DARK_SECOND_COLOR
+    .activepath
+        border-left: 4px solid $DARK_SECOND_COLOR
+        background: linear-gradient(126deg, rgba(255,255,255,0) 10%, $DARK_SECOND_COLOR 100%)
+
+        p
+            font-weight: 800
+            color: white
+        h4
+            color: white 
+    .navbar
+        background: $DARK_MAIN_COLOR
+    .whitecolor
+        color: $LIGHT_MAIN_COLOR
+
+
+.light
+    background: $LIGHT_MAIN_COLOR
+    h1, h2
+        color: $LIGHT_THIRD_COLOR
+    h3, h4, p
+        color: $LIGHT_SECOND_COLOR
+    a, h5
+        color: $LIGHT_THIRD_COLOR
+    button
+        color: $LIGHT_FIRST_COLOR
+        background: $LIGHT_SECOND_COLOR
+        transition: all 0.2s
+        &:hover
+            background: $DARK_MAIN_COLOR
+            color: $LIGHT_MAIN_COLOR
+            transition: all 0.2s
+    .active
+        color: $LIGHT_SECOND_COLOR
+    .activepath
+        border-left: 4px solid $LIGHT_SECOND_COLOR
+        background: linear-gradient(126deg, rgba(255,255,255,0) 10%, $LIGHT_SECOND_COLOR 100%)
+        p
+            font-weight: 800
+            color: white
+        h4
+            color: $LIGHT_FIRST_COLOR
+    .navbar
+        background: white
+    .whitecolor
+        color: $LIGHT_MAIN_COLOR

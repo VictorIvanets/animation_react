@@ -1,0 +1,69 @@
+@use '../../../sass/_variables' as *
+@use '../../../components/animation/_animation' as *
+
+@mixin calcbtn
+    width: 8rem
+    height: 8rem
+    background: #4b4b4b
+    border-radius: 0.5rem
+    border: 0.1rem solid #333333
+    @include flex-col-sp-center
+    color: $LIGHT_MAIN_COLOR
+    transition: all 0.2s
+    cursor: pointer
+    font-size: 4rem
+    &:hover
+        background: #585858
+        transition: all 0.2s
+    &:active
+        background: #332e2e
+        transition: all 0.2s
+        scale: 98%
+
+
+    
+.calcpage
+    width: 100%
+    height: calc(100vh - 2rem)
+    background: #0000006c
+    @include flex-col-sp-center
+    position: relative
+.calcbody
+    width: 40rem
+    height: 50rem
+    background: #7a7a7a
+    display: flex
+    &__btn
+        @include calcbtn
+        height: 6rem
+
+.calcbox
+    width: 30rem
+    height: 50rem
+    padding: 1rem
+    gap: 1rem
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+   
+    &__intbtn
+        @include calcbtn
+    &__output
+        padding: 0.5rem
+        width: 27rem
+        height: 8rem
+        border-radius: 0.5rem
+        font-size: 4rem
+        font-weight: 400
+        outline: none
+        overflow: hidden
+        background: #8f8f8f
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        h2
+            font-family: Arial, Helvetica, sans-serif
+            color: black
+            

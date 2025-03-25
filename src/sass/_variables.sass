@@ -1,0 +1,95 @@
+$DARK_MAIN_COLOR: #222831
+$DARK_FIRST_COLOR: #393e46
+$DARK_SECOND_COLOR: #f96d00
+$DARK_THIRD_COLOR: #f2f2f2
+
+$LIGHT_MAIN_COLOR: #f2f2f2
+$LIGHT_FIRST_COLOR: #f96d00
+$LIGHT_SECOND_COLOR: #393e46
+$LIGHT_THIRD_COLOR: #222831
+
+$GRAY: #242424
+
+@mixin flex-row-sp-between
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+@mixin flex-col-sp-center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 0.2rem
+
+@mixin absolute-center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+
+.mb-05
+    margin-bottom: 0.5rem
+.mb-1
+    margin-bottom: 1rem
+.mb-2
+    margin-bottom: 2rem
+.mt-05
+    margin-top: 0.5rem
+.mt-1
+    margin-top: 1rem
+.mt-2
+    margin-top: 2rem
+.ml-05
+    margin-left: 0.5rem
+.ml-1
+    margin-left: 1rem
+.ml-2
+    margin-left: 2rem
+.mr-05
+    margin-right: 0.5rem
+.mr-1
+    margin-right: 1rem
+.mr-2
+    margin-right: 2rem
+
+
+.p-05
+    padding: 0.5rem
+.p-1
+    padding: 1rem
+.p-2
+    padding: 2rem
+
+.pb-05
+    padding-bottom: 0.5rem
+.pb-1
+    padding-bottom: 1rem
+.pb-2
+    padding-bottom: 2rem
+.pt-05
+    padding-top: 0.5rem
+.pt-1
+    padding-top: 1rem
+.pt-2
+    padding-top: 2rem
+.pl-05
+    padding-left: 0.5rem
+.pl-1
+    padding-left: 1rem
+.pl-2
+    padding-left: 2rem
+.pr-05
+    padding-right: 0.5rem
+.pr-1
+    padding-right: 1rem
+.pr-2
+    padding-right: 2rem
+
+.centercol
+    @include flex-col-sp-center
+.centerrow
+    @include flex-row-sp-between

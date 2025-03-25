@@ -1,0 +1,39 @@
+@mixin animation-options($name, $duration, $easing) 
+    animation-duration: $duration
+    animation-timing-function: $easing
+    animation-fill-mode: forwards
+    overflow: hidden
+    animation-name: $name
+
+.slide-out-before
+    opacity: 1
+
+.slide-out-active
+    @include animation-options(slideOut, 0.5s, ease-in-out)
+    @keyframes slideOut
+        from
+            opacity: 1
+            transform: translateX(0%)
+          
+        to
+            transform: translateX(100%)
+            opacity: 0
+.slide-out-after
+    opacity: 1
+
+
+.slide-in-before
+    opacity: 1
+
+.slide-in-active
+    @include animation-options(slideIn, 0.5s, ease-in-out)
+    @keyframes slideIn
+        from
+            transform: translateX(-100%)
+            opacity: 0
+        
+        to
+            transform: translateX(0%)
+            opacity: 1
+.slide-in-after
+    opacity: 1
