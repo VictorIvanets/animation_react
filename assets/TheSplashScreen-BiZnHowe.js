@@ -1,1 +1,0 @@
-import{u as a,j as e,B as n,A as r}from"./index-Ld8vsYis.js";const l=()=>{const{navigateTo:s}=a();return e.jsxs("div",{className:"splashscreen",children:[e.jsx("h1",{children:"TheSplashScreen"}),e.jsx(n,{onClick:t=>{t.preventDefault(),s("/start")},appearance:r.big,children:"start"})]})};export{l as default};
