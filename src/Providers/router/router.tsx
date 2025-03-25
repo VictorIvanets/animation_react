@@ -94,6 +94,6 @@ export const router = createBrowserRouter(
   ],
 
   {
-    // basename: '/cinema',
+    basename: "/animation_react",
   }
 )
